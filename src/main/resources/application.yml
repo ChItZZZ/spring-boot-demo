@@ -1,0 +1,11 @@
+#server:
+#  port: 8080
+#
+#
+#girl:
+#  cupSize: F
+#  age: 18
+#  content: "cupSize: ${cupSize},age:${age}"
+spring:
+  profiles:
+    active: dev
