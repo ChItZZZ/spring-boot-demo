@@ -100,5 +100,10 @@ public class GirlController {
     public void getAge(@PathVariable("id") Integer id) throws Exception{
         girlService.getAge(id);
     }
+
+    @GetMapping(value = "/age/{age}")
+    public List<Girl> getAgeList(@PathVariable("age") Integer age){
+        return girlRepository.queryByAge(age);
+    }
 }
 
