@@ -1,15 +1,14 @@
 package com.shzhong.aspect;
 
-import org.aopalliance.intercept.Joinpoint;
-import org.apache.log4j.spi.LoggerFactory;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import javax.servlet.http.HttpServletRequest;
-import java.util.logging.Logger;
 
 /**
  * Created by my on 17/4/8.
@@ -23,7 +22,7 @@ public class HttpAspect {
 
 
     //spring内置looger
-    private final static org.slf4j.Logger LOGGER = org.slf4j.LoggerFactory.getLogger(HttpAspect.class);
+    private final static Logger LOGGER = LoggerFactory.getLogger(HttpAspect.class);
 
     //定义公用方法
     @Pointcut("execution(public * com.shzhong.controller.GirlController.*(..))")
