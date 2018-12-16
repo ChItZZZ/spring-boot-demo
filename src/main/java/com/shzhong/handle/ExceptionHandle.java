@@ -1,6 +1,5 @@
 package com.shzhong.handle;
 
-import com.shzhong.domain.Girl;
 import com.shzhong.domain.Result;
 import com.shzhong.exception.GirlException;
 import com.shzhong.utils.ResultUtil;
